@@ -301,13 +301,13 @@
 10/23/2023,10:30 pm,me-time,Home,happy,1hr 30mins,1.5,low,John
 10/23/2023,11:40 am,sleep,Home,relaxed,8hrs,8,medium,John
 10/09/2023,12:30 am,sleep,Home,good,6hrs,6,high,Xianna
-10/09/2023,6:30 am,To School,Home,normal,1hr,1,none,Xianna
-10/09/2023,7:30 am,FTF Class,School,Good,2hr,2,high,Xianna
+10/09/2023,6:30 am,travel to school,Home,normal,1hr,1,none,Xianna
+10/09/2023,7:30 am,class ftf,School,Good,2hr,2,high,Xianna
 10/09/2023,9:30 am,go home,Outside,normal,30mins,0.5,high,Xianna
 10/09/2023,10:00 am,review,Home,good,1hr,1,high,Xianna
 10/09/2023,11:00 am,me-time (social media),Home,good,1hr 30mins,1.5,low,Xianna
-10/09/2023,12:30 pm,to school,Outside,happy,30mins,0.5,low,Xianna
-10/09/2023,1:00 pm,FTF Class,School,Good,2hr,2,high,Xianna
+10/09/2023,12:30 pm,to other,Outside,happy,30mins,0.5,low,Xianna
+10/09/2023,1:00 pm,class ftf,School,Good,2hr,2,high,Xianna
 10/09/2023,3:00 pm,Eat,School,Good,1hr,1,high,Xianna
 10/09/2023,4:00 pm,me-time (social media),School,happy,1hr,1,low,Xianna
 10/09/2023,5:00 pm,To Other,Outside,tired,1hr 30mins,1.5,medium,Xianna
@@ -318,7 +318,7 @@
 10/10/2023,7:30 am,Online Class,Online Class,normal,2hr 30mins,2.5,high,Xianna
 10/10/2023,10:00 am,me-time (social media),Home,happy,30mins,0.5,none,Xianna
 10/10/2023,10:30 am,Online Class,Online Class,Bored,1hr,1,high,Xianna
-10/10/2023,11:30 am,To School,Home,tired,30mins,0.5,none,Xianna
+10/10/2023,11:30 am,travel to school,Home,tired,30mins,0.5,none,Xianna
 10/10/2023,11:30 am,FTF Class,School,Good,1hr 30mins,1.5,high,Xianna
 10/10/2023,1:30 pm,SSG,School,tired,2hr,2,low,Xianna
 10/10/2023,3:30 pm,FTF Class,School,tired,2hr 30mins,2.5,high,Xianna
@@ -351,20 +351,20 @@
 10/12/2023,11:00 pm,go home,Outside,Good,30mins,0.5,none,Xianna
 10/13/2023,12:00 am,me-time (social media),Home,Good,30mins,0.5,low,Xianna
 10/13/2023,12:30 am,sleep,Home,Good,6hrs,6,high,Xianna
-10/13/2023,6:30 am,To School,Home,normal,1hrs,1,none,Xianna
-10/13/2023,7:30 am,FTF Class,School,Good,2hrs,2,high,Xianna
+10/13/2023,6:30 am,travel to school,Home,normal,1hrs,1,none,Xianna
+10/13/2023,7:30 am,class ftf,School,Good,2hrs,2,high,Xianna
 10/13/2023,9:30 am,Eat,School,happy,1hrs 30mins,1.5,high,Xianna
 10/13/2023,11:00 am,me-time (social media),School,happy,2hrs,2,low,Xianna
-10/13/2023,1:00 pm,FTF Class,School,Good,2hrs,2,high,Xianna
+10/13/2023,1:00 pm,class ftf,School,Good,2hrs,2,high,Xianna
 10/13/2023,3:00 pm,Eat,School,Good,1hrs,1,high,Xianna
 10/13/2023,4:00 pm,me-time (social media),School,happy,1hrs,1,low,Xianna
-10/13/2023,5:00 pm,To Other,Outside,tired,1hrs 30mins,1.5,medium,Xianna
+10/13/2023,5:00 pm,go home,Outside,tired,1hrs 30mins,1.5,medium,Xianna
 10/13/2023,6:30 pm,review,Outside,Good,7hrs 30mins,7.5,high,Xianna
 10/14/2023,2:30 am,To Other,Outside,tired,30mins,0.5,none,Xianna
 10/14/2023,3:00 am,me-time (social media),Outside,tired,30mins,0.5,low,Xianna
 10/14/2023,3:30 am,sleep,Outside,normal,4hrs 30mins,4.5,high,Xianna
 10/14/2023,8:00 am,Meeting,Outside,tired,4hrs 30mins,4.5,high,Xianna
-10/14/2023,12:30 pm,To School,Outside,tired,30mins,0.5,none,Xianna
+10/14/2023,12:30 pm,travel to school,Outside,tired,30mins,0.5,none,Xianna
 10/14/2023,1:00 pm,Meeting,Outside,Good,3hrs 30mins,3.5,high,Xianna
 10/14/2023,4:30 pm,To Other,Outside,excited,30mins,0.5,none,Xianna
 10/14/2023,5:00 pm,Went Out,Outside,happy,3hrs,3,medium,Xianna
@@ -382,10 +382,10 @@
 10/16/2023,2:00 am,review,Outside,tired,4hrs 30mins,4.5,high,Xianna
 10/16/2023,6:30 am,Eat,Outside,Good,30mins,0.5,medium,Xianna
 10/16/2023,7:00 am,To School,Outside,Good,30mins,0.5,none,Xianna
-10/16/2023,7:30 am,FTF Class,School,Good,2hrs 30mins,2.5,high,Xianna
+10/16/2023,7:30 am,class ftf,School,Good,2hrs 30mins,2.5,high,Xianna
 10/16/2023,10:00 am,Eat,School,normal,1hrs,1,low,Xianna
 10/16/2023,11:00 am,review,School,Good,2hrs,2,high,Xianna
-10/16/2023,1:00 pm,FTF Class,School,Good,2hrs,2,high,Xianna
+10/16/2023,1:00 pm,class ftf,School,Good,2hrs,2,high,Xianna
 10/16/2023,3:00 pm,go home,Outside,normal,30mins,0.5,none,Xianna
 10/16/2023,3:30 pm,me-time (social media),Home,Good,1hrs,1,low,Xianna
 10/16/2023,4:30 pm,To Other,Home,excited,30mins,0.5,none,Xianna
@@ -398,7 +398,7 @@
 10/17/2023,10:30 am,Online Class,Online Class,normal,2hrs,2,high,Xianna
 10/17/2023,12:00 pm,me-time (social media),Home,Good,30mins,0.5,low,Xianna
 10/17/2023,12:30 pm,me-time (watch movies),Home,happy,2hrs 30mins,2.5,low,Xianna
-10/17/2023,3:00 pm,To School,Home,normal,1hrs,1,none,Xianna
+10/17/2023,3:00 pm,travel to school,Home,normal,1hrs,1,none,Xianna
 10/17/2023,4:00 pm,review,School,normal,1hrs,1,medium,Xianna
 10/17/2023,5:00 pm,go home,Outside,normal,30mins,0.5,none,Xianna
 10/17/2023,5:30 pm,Clean room,Home,Good,2hrs,2,high,Xianna
@@ -422,16 +422,16 @@
 10/19/2023,10:00 am,Eat,Home,Good,30mins,0.5,high,Xianna
 10/19/2023,10:30 am,Online Class,Online Class,Good,1hrs 30mins,1.5,high,Xianna
 10/19/2023,12:00 pm,me-time (social media),Home,happy,2hrs,2,low,Xianna
-10/19/2023,2:00 pm,To School,Home,Good,1hrs 30mins,1.5,none,Xianna
-10/19/2023,3:30 pm,FTF Class,School,Good,2hrs 30mins,2.5,high,Xianna
+10/19/2023,2:00 pm,travel to school,Home,Good,1hrs 30mins,1.5,none,Xianna
+10/19/2023,3:30 pm,class ftf,School,Good,2hrs 30mins,2.5,high,Xianna
 10/19/2023,6:00 pm,review,School,tired,1hrs,1,high,Xianna
 10/19/2023,7:00 pm,go home,Outside,tired,30mins,0.5,none,Xianna
 10/19/2023,7:30 pm,me-time (social media),Home,happy,2hrs 30mins,2.5,low,Xianna
 10/19/2023,10:00 pm,Eat,Home,happy,30mins,0.5,medium,Xianna
 10/19/2023,10:30 pm,review,Home,Good,2hrs,2,high,Xianna
 10/20/2023,12:30 am,sleep,Home,normal,6hrs,6,high,Xianna
-10/20/2023,6:30 am,To School,Home,tired,1hrs,1,none,Xianna
-10/20/2023,7:30 am,FTF Class,School,Good,2hrs 30mins,2.5,high,Xianna
+10/20/2023,6:30 am,travel to school,Home,tired,1hrs,1,none,Xianna
+10/20/2023,7:30 am,class ftf,School,Good,2hrs 30mins,2.5,high,Xianna
 10/20/2023,10:00 am,go home,Outside,normal,30mins,0.5,none,Xianna
 10/20/2023,10:30 am,SSG,Home,Good,1hrs 30mins,1.5,medium,Xianna
 10/20/2023,12:00 pm,review,Home,Good,4hrs 30mins,4.5,high,Xianna
@@ -454,12 +454,12 @@
 10/22/2023,5:30 pm,me-time (social media),Home,Good,2hrs 30mins,2.5,low,Xianna
 10/22/2023,8:00 pm,me-time (watch movies),Home,happy,4hrs 30mins,4.5,low,Xianna
 10/23/2023,12:00 am,sleep,Home,normal,6hrs 30mins,6.5,high,Xianna
-10/23/2023,6:30 am,To School,Home,normal,1hrs,1,none,Xianna
-10/23/2023,7:30 am,FTF Class,School,Good,2hrs 30mins,2.5,high,Xianna
-10/23/2023,10:00 am,go home,Outside,normal,30mins,0.5,none,Xianna
+10/23/2023,6:30 am,travel to school,Home,normal,1hrs,1,none,Xianna
+10/23/2023,7:30 am,class ftf,School,Good,2hrs 30mins,2.5,high,Xianna
+10/23/2023,10:00 am,head outside school,Outside,normal,30mins,0.5,none,Xianna
 10/23/2023,10:30 am,me-time (watch movies),Home,Good,1hrs,1,medium,Xianna
-10/23/2023,12:30 pm,To School,Outside,normal,30mins,0.5,none,Xianna
-10/23/2023,1:00 pm,FTF Class,School,Good,2hrs,2,high,Xianna
+10/23/2023,12:30 pm,vacant time,Outside,normal,30mins,0.5,none,Xianna
+10/23/2023,1:00 pm,class ftf,School,Good,2hrs,2,high,Xianna
 10/23/2023,3:00 pm,go home,Outside,normal,30mins,0.5,none,Xianna
 10/23/2023,3:30 pm,Cook,Home,Good,1hrs 30mins,1.5,high,Xianna
 10/23/2023,5:00 pm,Eat,Home,Good,30mins,0.5,medium,Xianna
