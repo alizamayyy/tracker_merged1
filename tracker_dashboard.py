@@ -11,7 +11,7 @@ import requests
 st.set_page_config(layout="wide")
 
 # Load your dataset
-file_path = "https://raw.githubusercontent.com/alizamayyy/tracker_merged/main/tracker_merged.csv"
+file_path = "https://raw.githubusercontent.com/alizamayyy/tracker_merged1/main/tracker_merged1.csv"
 
 response = requests.get(file_path)
 df = pd.read_csv(io.StringIO(response.text))
