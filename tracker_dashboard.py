@@ -444,6 +444,51 @@ with col2:
     """, unsafe_allow_html=True)
 
 
+# Define a function to categorize activities
+def categorize_activity(activity):
+    if 'play' in activity.lower():
+        return 'Playing'
+    elif 'eat' in activity.lower():
+        return 'Eating'
+    elif 'social media' in activity.lower():
+        return 'Social Media'
+    elif 'meeting' in activity.lower():
+        return 'Meeting'
+    elif 'class' in activity.lower() or 'review' in activity.lower():
+        return 'Class/Review'
+    else:
+        return 'Other'
+
+# Create a new column 'Category' based on the categorization function
+df['Category'] = df['Activity'].apply(categorize_activity)
+
+# Filter the DataFrame for the relevant categories
+filtered_categories = df[df['Category'].isin(['Play', 'Eat', 'Social Media', 'Meeting', 'Class/Review'])]
+
+# Count the occurrences of each category
+category_counts = filtered_categories['Category'].value_counts().reset_index()
+category_counts.columns = ['Category', 'Count']
+
+# Create a pie chart
+fig_pie_category = px.pie(
+    category_counts,
+    names='Category',
+    values='Count',
+    title='Distribution of Activity Categories',
+    color_discrete_sequence=px.colors.qualitative.Set3
+)
+
+# Customize the layout
+fig_pie_category.update_layout(
+    title_x=0.5,
+    title_y=0.9,
+    height=500,
+    width=700,
+)
+
+# Display the pie chart
+st.plotly_chart(fig_pie_category, use_container_width=True)
+
 
 
 
