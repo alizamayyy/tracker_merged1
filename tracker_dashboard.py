@@ -93,10 +93,10 @@ with c1:
 
     # Add box shadow with the color fbb1bd and remove the border
     c1_col1.markdown(f"""
-        <div style="height: 150px; padding: 20px; border-radius: 20px; background-color: #fbb1bd; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
-            <div style="text-align: center; margin-top: 20px">
-                <h3 style="line-height: 0.3;">Average Sleep:</h3>
-                <h4 style="line-height: 0.3;">{average_sleep_hours:.2f} hours</h4>
+        <div style="height: 150px; padding: 20px; margin-bottom: 40px; border-radius: 20px; background-color: #fbb1bd; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+            <div style="text-align: center; margin-top: 20px;">
+                <h3 style="line-height: 0.3; font-family: sans-serif">Average Sleep:</h3>
+                <h4 style="line-height: 0.3; font-family: sans-serif">{average_sleep_hours:.2f} hours</h4>
             </div>
         </div>
     """, unsafe_allow_html=True)
@@ -104,8 +104,8 @@ with c1:
     c1_col2.markdown(f"""
         <div style="height: 150px; padding: 20px; border-radius: 20px; background-color: #ff99ac; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
             <div style="text-align: center; margin-top: 20px">
-                <h3 style="line-height: 0.3;">Average Study:</h3>
-                <h4 style="line-height: 0.3;">{average_study_hours:.2f} hours</h4>
+                <h3 style="line-height: 0.3; font-family: sans-serif">Average Study:</h3>
+                <h4 style="line-height: 0.3; font-family: sans-serif">{average_study_hours:.2f} hours</h4>
             </div>
         </div>
     """, unsafe_allow_html=True)
@@ -113,12 +113,11 @@ with c1:
 
 # Add the Location Check pie chart in a new row
 with c1:
-    st.markdown("<h3 style='text-align: center; margin-top: 20px'>Location Check</h3>", unsafe_allow_html=True)
     location_counts = df['Location'].value_counts().reset_index()
     location_counts.columns = ['Location', 'Count']
     
     # Define a custom color palette
-    custom_colors = ['#EC0B43', '#fbb1bd', '#58355E', '#D6FFB7', '#ff5c8a', '#FFF689']
+    custom_colors = ['#ea638c', '#fbb1bd', '#03045e', '#339989',  '#FFF689', '#89023e',]
     
 #     EC0B43
 # 58355E
@@ -138,7 +137,8 @@ with c1:
         title_x=0.28,
         title_y=0.99,
         height=400,  # Set the height of the chart (in pixels)
-        width=300,  # Set the width of the chart (in pixels)
+        width=300,
+        legend=dict(x=0.75),# Set the width of the chart (in pixels)
     )
     st.plotly_chart(location_fig, use_container_width=True)
     
@@ -148,10 +148,10 @@ c2_col1, c2_col2 = c2.columns([1, 1])
 
 # Add box shadow with the color fbb1bd and remove the border
 c2_col1.markdown(f"""
-    <div style="height: 150px; padding: 20px; border-radius: 20px; background-color: #ff7096; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+    <div style="height: 150px; padding: 20px; margin-bottom: 40px; border-radius: 20px; background-color: #ff7096; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
         <div style="text-align: center; margin-top: 1px">
-            <h3 style="line-height: 1;">Average Travel to School:</h3>
-            <h4 style="line-height: 0;">{average_travel_to_school_hours:.2f} hours</h4>
+            <h3 style="line-height: 1; font-family: "Source Sans Pro"">Average Travel to School:</h3>
+            <h3 style="line-height: 0; font-family: "Source Sans Pro"">{average_travel_to_school_hours:.2f} hours</h3>
         </div>
     </div>
 """, unsafe_allow_html=True)
@@ -159,15 +159,14 @@ c2_col1.markdown(f"""
 c2_col2.markdown(f"""
     <div style="height: 150px; padding: 20px; border-radius: 20px; background-color: #ff5c8a; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
         <div style="text-align: center; margin-top: 1px">
-            <h3 style="line-height: 1;">Average Travel to Home:</h3>
-            <h4 style="line-height: 0;">{average_travel_to_home_hours:.2f} hours</h4>
+            <h3 style="line-height: 1; font-family: "Source Sans Pro"">Average Travel Home:</h3>
+            <h3 style="line-height: 0; font-family: "Source Sans Pro"">{average_travel_to_home_hours:.2f} hours</h3>
         </div>
     </div>
 """, unsafe_allow_html=True)
 
 # Add the Feelings in a Pie chart in a new row
 with c2:
-    st.markdown("<h3 style='text-align: center; margin-top: 20px; margin-bottom: -10px'>Time of Sleep per Day</h3>", unsafe_allow_html=True)
     # Display the first "Sleep Check" chart
     df['Date'] = pd.to_datetime(df['Date'])
     # Display the "Sleep Time per Day" chart for Aliza, John, and Xianna
@@ -182,7 +181,7 @@ with c2:
         title='What time did we sleep per day?',
         line_shape='linear',  # Set the line shape to 'linear' for solid lines
         labels={'Time': 'Sleep Time'},
-        color_discrete_sequence=['#ff477e', 'blue', 'red']  # Add your desired colors for the second and third person
+        color_discrete_sequence=['#ea638c', '#03045e', '#339989']  # Add your desired colors for the second and third person
     )
 
     # Customize the layout
@@ -226,15 +225,14 @@ with c2:
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("<h3 style='text-align: center; margin-top: 20px'>Hours of Sleep per Day</h3>", unsafe_allow_html=True)
     sleep_bar_fig_grouped = px.bar(
         sleep_data,
         x='Date',
         y='Duration in Hrs',
         color='Name',
-        title='Hours many hours did we spend sleeping per day?',
+        title='How many hours did we spend sleeping per day?',
         labels={'Duration in Hrs': 'Hours'},
-        color_discrete_sequence=['#ff477e', 'blue', 'red']
+        color_discrete_sequence=['#ea638c', '#03045e', '#339989']
     )
     sleep_bar_fig_grouped.update_layout(
         xaxis_title='Date',
@@ -256,7 +254,6 @@ with col1:
 
 # Display the "Hours of Commute per School Day" grouped bar chart in the second column
 with col2:
-    st.markdown("<h3 style='text-align: center; margin-top: 20px'>Hours of Commute per School Day</h3>", unsafe_allow_html=True)
     fig_commute = px.bar(
         commute_data,
         x='Date',
@@ -264,7 +261,7 @@ with col2:
         color='Name',
         title='Hours many hours did we spend commuting per day?',
         labels={'Duration in Hrs': 'Hours'},
-        color_discrete_sequence=['#ff477e', 'blue', 'red']
+        color_discrete_sequence=['#ea638c', '#03045e', '#339989']
     )
     fig_commute.update_layout(
         xaxis=dict(
@@ -299,8 +296,6 @@ c3.markdown(f"""
 
 c3_col1, c3_col2 = st.columns([1, 1])
 
-c3_col1.markdown("<h2 style='text-align: center; margin-top: 55px; margin-bottom: -10px; margin-left: 300px'>Student-Life Balance</h2>", unsafe_allow_html=True)
-
 # Filter the DataFrame for "me-time (tiktok and social media)" activity for the specific names
 me_time_data_individual = df[df['Name'].isin(['Aliza', 'John', 'Xianna']) & df['Activity'].str.contains('me-time', case=False, na=False)]
 
@@ -333,51 +328,10 @@ chart_height = 400
 chart_width = 600
 
 # Create three columns
-col1, col2, col3 = st.columns(3)
-
-# Column 1: Me-time Distribution
-with col1:
-    st.markdown("<h3 style='text-align: center; margin-top: 55px; margin-bottom: -10px; margin-left: 15px'>Me-time Distribution</h3>", unsafe_allow_html=True)
-    fig_me_time_comparison = px.pie(
-        me_time_data_individual,
-        names='Name',
-        title='Me-time of Each Student',
-        color='Name',
-        color_discrete_map={'Aliza': '#ff85a1', 'John': 'blue', 'Xianna': 'red'},  # Different colors for each name
-    )
-    fig_me_time_comparison.update_layout(
-         title_y=0.99,
-        title_x=0.36,   # Center the title
-        height=chart_height,  # Set the height of the chart (in pixels)
-        width=chart_width,  # Set the width of the chart (in pixels)
-        legend=dict(orientation='h', y=-0.2, x=0.3),  # Move the legend below (horizontal orientation)
-    )
-    fig_me_time_comparison.update_traces(textinfo='percent+label', textfont_size=14)
-    st.plotly_chart(fig_me_time_comparison, use_container_width=True)
-
-# Column 2: Student Life Distribution
-with col2:
-    st.markdown("<h3 style='text-align: center; margin-top: 55px; margin-bottom: -10px'>Student Life Distribution</h3>", unsafe_allow_html=True)
-    fig_student_life_comparison = px.pie(
-        study_data_individual,
-        names='Name',
-        title='Student Life of Each Student',
-        color='Name',
-        color_discrete_map={'Aliza': '#ff85a1', 'John': 'blue', 'Xianna': 'red'},  # Different colors for each name
-    )
-    fig_student_life_comparison.update_layout(
-        title_y=0.99,
-        title_x=0.31,  # Center the title
-        height=chart_height,  # Set the height of the chart (in pixels)
-        width=chart_width,  # Set the width of the chart (in pixels)
-        legend=dict(orientation='h', y=-0.2, x=0.3),  # Move the legend below (horizontal orientation)
-    )
-    fig_student_life_comparison.update_traces(textinfo='percent+label', textfont_size=14)
-    st.plotly_chart(fig_student_life_comparison, use_container_width=True)
+col1, col2 = st.columns(2)
 
 # Column 3: Feelings Distribution
-with col3:
-    st.markdown("<h3 style='text-align: center; margin-top: 55px'>Feelings Distribution</h3>", unsafe_allow_html=True)
+with col1:
     feelings_counts = df['Feelings'].value_counts().reset_index()
     feelings_counts.columns = ['Feelings', 'Count']
     top_6_feelings = feelings_counts.head(6)
@@ -385,15 +339,14 @@ with col3:
         top_6_feelings,
         names='Feelings',
         values='Count',
-        title='How We Felt From Time to Time',
+        title='Our Two-Week Feelings in a Pie',
         color_discrete_sequence=custom_colors  # Set the custom color palette
     )
     feelings_fig.update_layout(
-        title_y=0.99,
-        title_x=0.3,  # Center the title
-        height=600,  # Set the height of the chart (in pixels)
-        width=600,  # Set the width of the chart (in pixels)
-        legend=dict(orientation='h', x=0.1),  # Center the legend below (horizontal orientation)
+        title_x=0.37,  # Center the title
+        height=500,  # Set the height of the chart (in pixels)
+        width=500,  # Set the width of the chart (in pixels)
+        legend=dict(x=0.75),  # Center the legend below (horizontal orientation)
     )
     feelings_fig.update_traces(textinfo='percent', textfont_size=14)
     st.plotly_chart(feelings_fig, use_container_width=True)
@@ -411,83 +364,55 @@ with col3:
 #     )
 #     fig_hours_being_me.update_traces(textinfo='percent', textfont_size=14)
 #     st.plotly_chart(fig_hours_being_me, use_container_width=True, style={'margin-left': '150px'})
+with col2:
+# Define a function to categorize activities
+    def categorize_activity(activity):
+        if 'play' in activity.lower():
+            return 'Playing'
+        elif 'eat' in activity.lower():
+            return 'Eating'
+        elif 'social media' in activity.lower():
+            return 'Social Media'
+        elif 'meeting' in activity.lower():
+            return 'Meeting'
+        elif 'class' in activity.lower() or 'review' in activity.lower():
+            return 'Studies'
+        else:
+            return 'Other'
+
+    # Create a new column 'Category' based on the categorization function
+    df['Category'] = df['Activity'].apply(categorize_activity)
+
+    # Filter the DataFrame for the relevant categories
+    filtered_categories = df[df['Category'].isin(['Playing', 'Eating', 'Social Media', 'Meeting', 'Studies'])]
+
+    # Count the occurrences of each category
+    category_counts = filtered_categories['Category'].value_counts().reset_index()
+    category_counts.columns = ['Category', 'Count']
     
-# Create two columns for the layout
-col1, col2 = st.columns([1, 1])
+    custom_colors = ['#ea638c', '#fbb1bd', '#03045e', '#339989',  '#FFF689', '#89023e',]
 
-# Below Columns 1: Div
-with col1:
-    st.markdown("<h3 style='text-align: center; margin-top: -150px; margin-left: 300px'>Time Being Ourselves and Students</h3>", unsafe_allow_html=True)
-
-    # Create the pie chart
-    fig_hours_being_me = go.Figure(data=[go.Pie(labels=['Student Life', 'Me-time'], values=values, marker=dict(colors=['#EC0B43', '#fbb1bd']))])
-
-    # Adjust the size and margin of the chart
-    fig_hours_being_me.update_layout(
-        height=350,  # Set the height of the chart (in pixels)
-        width=350,   # Set the width of the chart (in pixels)
-        margin=dict(t=0, l=400),
+    # Create a donut chart
+    fig_donut_category = px.pie(
+        category_counts,
+        names='Category',
+        values='Count',
+        title='Which Activities Did We Spend Our Time On?',
+        color_discrete_sequence=custom_colors,
+        hole=0.5  # Set the size of the hole in the center for the donut chart
     )
 
-    # Plot the chart inside the iframe
-    st.plotly_chart(fig_hours_being_me, use_container_width=True, key="plotly_chart")
+    # Customize the layout
+    fig_donut_category.update_layout(
+       title_x=0.32,
+        title_y=0.9,
+        height=500,
+        width=700,
+        legend=dict(x=0.75),
+    )
 
-
-
-
-# Below Columns 2: Chart
-with col2:
-    # Encapsulate the div with custom styling
-    st.markdown("""
-        <div style="margin-left: -1000px;">
-        </div>
-    """, unsafe_allow_html=True)
-
-
-# Define a function to categorize activities
-def categorize_activity(activity):
-    if 'play' in activity.lower():
-        return 'Playing'
-    elif 'eat' in activity.lower():
-        return 'Eating'
-    elif 'social media' in activity.lower():
-        return 'Social Media'
-    elif 'meeting' in activity.lower():
-        return 'Meeting'
-    elif 'class' in activity.lower() or 'review' in activity.lower():
-        return 'Class/Review'
-    else:
-        return 'Other'
-
-# Create a new column 'Category' based on the categorization function
-df['Category'] = df['Activity'].apply(categorize_activity)
-
-# Filter the DataFrame for the relevant categories
-filtered_categories = df[df['Category'].isin(['Play', 'Eat', 'Social Media', 'Meeting', 'Class/Review'])]
-
-# Count the occurrences of each category
-category_counts = filtered_categories['Category'].value_counts().reset_index()
-category_counts.columns = ['Category', 'Count']
-
-# Create a pie chart
-fig_pie_category = px.pie(
-    category_counts,
-    names='Category',
-    values='Count',
-    title='Distribution of Activity Categories',
-    color_discrete_sequence=px.colors.qualitative.Set3
-)
-
-# Customize the layout
-fig_pie_category.update_layout(
-    title_x=0.5,
-    title_y=0.9,
-    height=500,
-    width=700,
-)
-
-# Display the pie chart
-st.plotly_chart(fig_pie_category, use_container_width=True)
+    # Display the donut chart
+    st.plotly_chart(fig_donut_category, use_container_width=True)
 
 
 
