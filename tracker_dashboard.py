@@ -29,7 +29,8 @@ margins_css = """
 st.markdown(margins_css, unsafe_allow_html=True)
 
 # Streamlit app title
-st.markdown("<h1 style='text-align: center; margin-bottom: 20px'>What Happened in the Span of Two Weeks?</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; margin-bottom: 0px'>What Happened in the Span of Two Weeks?</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; margin-bottom: 20px; margin-top: -20px; font-family: monospace'>Team <span style='color: red'>LovingIsa</span></h2>", unsafe_allow_html=True)
 
 
 sleep_data = df[df['Activity'] == 'sleep']
